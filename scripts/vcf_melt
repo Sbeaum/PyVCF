@@ -21,7 +21,7 @@ reader = vcf.VCFReader(inp)
 formats = reader.formats.keys()
 infos = reader.infos.keys()
 
-header = ["SAMPLE"] + formats + ['FILTER', 'CHROM', 'POS', 'REF', 'ALT', 'ID'] \
+header = ["SAMPLE"] + list(formats) + ['FILTER', 'CHROM', 'POS', 'REF', 'ALT', 'ID'] \
         + ['info.' + x for x in infos]
 
 
